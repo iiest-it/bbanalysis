@@ -6,7 +6,6 @@ from matplotlib import animation
 from matplotlib.patches import Circle, Rectangle, Arc, Polygon
 from scipy.spatial import ConvexHull, Voronoi, voronoi_plot_2d
 from matplotlib.collections import LineCollection, PolyCollection
-import numpy as np
 import time
 import sys
 
@@ -15,7 +14,6 @@ class Event:
         moments = event['moments']
         self.analytics=analytics
         self.moments = [Moment(moment) for moment in moments]
-        # self.home_colour=home_players
         home_players = event['home']['players']
         guest_players = event['visitor']['players']
         players = home_players + guest_players
